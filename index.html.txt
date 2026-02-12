@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Mobile Games PH</title>
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0f0f0f;
+    color:white;
+    text-align:center;
+}
+.container {
+    padding:20px;
+}
+h1 {
+    font-size:22px;
+    margin-top:20px;
+}
+p {
+    color:#ccc;
+    font-size:14px;
+}
+.button {
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 25px;
+    background:#00c853;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+.badge {
+    margin-top:10px;
+    font-size:12px;
+    color:#aaa;
+}
+.timer {
+    margin-top:15px;
+    font-size:14px;
+    color:#ff5252;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>New Mobile Games Trending in Philippines 🎮</h1>
+
+<p>We detected your device.<br>
+Showing the best available games for you.</p>
+
+<div class="timer">
+Offers refresh in: <span id="countdown">05:00</span>
+</div>
+
+<a href="YOUR_SMARTLINK_HERE" class="button">
+Show Available Games
+</a>
+
+<div class="badge">
+✔ Free to install<br>
+✔ Updated daily<br>
+✔ Works on Android & iPhone
+</div>
+
+</div>
+
+<script>
+var time = 300;
+var countdown = document.getElementById("countdown");
+setInterval(function(){
+    var minutes = Math.floor(time / 60);
+    var seconds = time % 60;
+    countdown.innerHTML = 
+        (minutes < 10 ? "0" : "") + minutes + ":" + 
+        (seconds < 10 ? "0" : "") + seconds;
+    time--;
+    if(time < 0) time = 300;
+},1000);
+</script>
+
+</body>
+</html>
